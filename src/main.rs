@@ -1,3 +1,16 @@
+use serenity::{
+  prelude::*,
+  model::prelude::*,
+  Client,
+};
+
+struct Handler;
+impl EventHandler for Handler {
+  fn message(&self, context: Context, msg: Message) {
+    unimplemented!();
+  }
+}
+
 fn main() {
-    println!("Hello, world!");
+  let mut client = Client::new("<token>", Handler).expect("Couldn't create the new client!");
 }
